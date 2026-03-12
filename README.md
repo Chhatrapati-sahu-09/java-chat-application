@@ -1,93 +1,40 @@
-# Java Chat Application
+# Java Socket Chat Application
 
-A multi-threaded client-server chat application built with Java sockets.
+A multi-client real-time chat application built using Java Socket Programming and Multithreading.
+This project demonstrates how a client-server architecture works where multiple clients connect to a server and exchange messages simultaneously.
 
-## Project Structure
+---
 
-```
-ChatApp/
-├── server/
-│   ├── ChatServer.java      # Main server that accepts client connections
-│   └── ClientHandler.java   # Handles individual client communication
-├── client/
-│   └── ChatClient.java      # Client application to connect to server
-└── README.md
-```
+## Tech Stack
+
+<p>
+<img src="https://skillicons.dev/icons?i=java" />
+<img src="https://skillicons.dev/icons?i=git" />
+<img src="https://skillicons.dev/icons?i=github" />
+</p>
+
+---
+
+## Project Overview
+
+This application allows multiple users to connect to a central server and communicate in real time.
+
+Each client connects through a socket connection, and the server manages multiple clients using multithreading. Every message sent by a client is broadcast to all connected clients.
+
+---
 
 ## Features
 
-- **Multi-client support**: Multiple clients can connect and chat simultaneously
-- **Broadcast messaging**: Messages are sent to all connected clients
-- **Private messaging**: Send private messages using `@username message`
-- **Server logging**: All messages are logged with timestamps
-- **Threaded architecture**: Each client runs in its own thread
+* Multi-client chat support
+* Real-time message broadcasting
+* Username identification for each user
+* Thread-based client handling
+* Server logs for connections and messages
+* Terminal-based interface
 
-## Requirements
+---
 
-- JDK 17 or higher
-- Terminal/Command Prompt
-
-## How to Run
-
-### Step 1: Compile the Project
-
-Navigate to the `ChatApp` directory and compile:
-
-```bash
-cd ChatApp
-javac server/*.java
-javac client/*.java
-```
-
-### Step 2: Start the Server
-
-```bash
-java server.ChatServer
-```
-
-Output:
-
-```
-[HH:mm:ss] Server started...
-```
-
-### Step 3: Start Clients
-
-Open multiple terminal windows and run:
-
-```bash
-java client.ChatClient
-```
-
-Enter your username when prompted.
-
-## Usage Examples
-
-### Broadcast Message
-
-Simply type your message and press Enter:
-
-```
-Hello everyone!
-```
-
-### Private Message
-
-Use the `@username` syntax:
-
-```
-@Rahul Hello, this is a private message!
-```
-
-### Exit
-
-Type `quit` to disconnect:
-
-```
-quit
-```
-
-## Architecture
+## Project Architecture
 
 ```
 Client 1
@@ -97,30 +44,139 @@ Client 2 -----> Server -----> Broadcast to all clients
 Client 3
 ```
 
-## Server Logs Format
+The server listens for client connections and creates a new thread for each connected client to handle communication independently.
 
-The server logs all activity with timestamps:
+---
+
+## Project Structure
 
 ```
-[10:30:15] Server started...
-[10:30:20] New client connected
-[10:30:25] Rahul joined the chat
-[10:31:00] Rahul: Hello
-[10:32:00] Rahul left the chat
+ChatApp
+│
+├── server
+│   ├── ChatServer.java
+│   └── ClientHandler.java
+│
+├── client
+│   └── ChatClient.java
+│
+└── README.md
 ```
 
-## Configuration
+---
 
-Default settings in the code:
+## Requirements
 
-- **Port**: 12345
-- **Server Address**: localhost
+* Java JDK 17 or higher
+* Git (optional)
+* VS Code or IntelliJ IDEA
 
-To change these, modify the constants in:
+---
 
-- `ChatServer.java` - `PORT`
-- `ChatClient.java` - `SERVER_ADDRESS` and `PORT`
+## How to Run the Project
 
-## License
+### 1. Clone the Repository
 
-This project is for educational purposes.
+```
+git clone https://github.com/yourusername/java-chat-application.git
+cd java-chat-application
+```
+
+---
+
+### 2. Compile the Server
+
+```
+javac server/*.java
+```
+
+---
+
+### 3. Compile the Client
+
+```
+javac client/*.java
+```
+
+---
+
+### 4. Start the Server
+
+```
+java server.ChatServer
+```
+
+Server output example:
+
+```
+Server started...
+```
+
+---
+
+### 5. Run the Client
+
+Open another terminal and run:
+
+```
+java client.ChatClient
+```
+
+Example:
+
+```
+Enter your username:
+Rahul
+```
+
+Run multiple clients to simulate a real chat environment.
+
+---
+
+## Example Chat
+
+Client 1
+
+```
+Enter your username:
+Rahul
+Rahul joined the chat
+```
+
+Client 2
+
+```
+Enter your username:
+Amit
+Amit joined the chat
+```
+
+Conversation
+
+```
+Rahul: Hello
+Amit: Hi Rahul
+```
+
+---
+
+## Possible Improvements
+
+* Private messaging between users
+* Chat rooms / group chats
+* GUI interface using Java Swing
+* Message encryption for secure communication
+* Chat history storage
+
+---
+
+## Author
+
+Chhatrapati Sahu
+Full Stack Developer (MERN Stack)
+
+GitHub
+https://github.com/Chhatrapati-sahu-09
+
+Portfolio
+https://www.chhatrapatisahu.me
