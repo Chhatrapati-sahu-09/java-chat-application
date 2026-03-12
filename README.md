@@ -25,12 +25,12 @@ Each client connects through a socket connection, and the server manages multipl
 
 ## Features
 
-* Multi-client chat support
-* Real-time message broadcasting
-* Username identification for each user
-* Thread-based client handling
-* Server logs for connections and messages
-* Terminal-based interface
+- Multi-client chat support
+- Real-time message broadcasting
+- Username identification for each user
+- Thread-based client handling
+- Server logs for connections and messages
+- Terminal-based interface
 
 ---
 
@@ -67,9 +67,9 @@ ChatApp
 
 ## Requirements
 
-* Java JDK 17 or higher
-* Git (optional)
-* VS Code or IntelliJ IDEA
+- Java JDK 17 or higher
+- Git (optional)
+- VS Code or IntelliJ IDEA
 
 ---
 
@@ -162,11 +162,31 @@ Amit: Hi Rahul
 
 ## Possible Improvements
 
-* Private messaging between users
-* Chat rooms / group chats
-* GUI interface using Java Swing
-* Message encryption for secure communication
-* Chat history storage
+- Private messaging between users
+- Chat rooms / group chats
+- GUI interface using Java Swing
+- Message encryption for secure communication
+- Chat history storage
+
+---
+
+## Screenshots
+
+### Server Started
+
+![Server Started](client/screenshot/Screenshot%202026-03-12%20202407.png)
+
+### Client Connection
+
+![Client Connection](client/screenshot/Screenshot%202026-03-12%20202433.png)
+
+### Chat Session
+
+![Chat Session](client/screenshot/Screenshot%202026-03-12%20202458.png)
+
+### Multiple Clients
+
+![Multiple Clients](client/screenshot/Screenshot%202026-03-12%20202506.png)
 
 ---
 
